@@ -1,0 +1,443 @@
+.login-alert-container .alert-success{
+    color: #3c763d !important;
+}
+.plp-item .price--main{
+    font-size: 1rem;
+}
+/* Responsive header initial setup */
+.first-responsive{
+    padding: 1rem 0;
+    display: none;
+}
+.first-responsive .logo h1 {
+    background: url(../images/befyne.png) 50% no-repeat;
+}
+.first-responsive .search-form {
+    margin-top: 1rem;
+}
+
+.first-responsive .menu-trigger{
+
+}
+/* Responsive menu initial setup */
+.befyne-menu-resp-header{
+    display: none;
+    background: #21201E;
+    color: #fff;
+    padding: 1rem 0;
+}
+.befyne-menu-resp-header p{
+    margin: 0;
+}
+#responsive-cats-trigger{
+    color: white;
+}
+#responsive-cats-trigger:hover{
+    color: #108535;
+}
+.main-befyne-header .main-menu {
+    display: block;
+}
+/*-----------------------------------*/
+/*              MAX 480              */
+/*-----------------------------------*/
+@media (max-width: 480px) {
+
+    .modal.fade .modal-dialog{
+        width: 400px;
+        max-width: 400px;
+    }
+    /*-------------------*/
+    /* LOGIN PAGE        */
+    /*-------------------*/
+    .login .main-login {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    .login-alert-container {
+        position: absolute;
+        top: 17rem;
+        right: 6rem;
+        min-width: 18rem;
+    }
+    .login-footer--menu ul li {
+        text-align: center;
+    }
+    /*-------------------*/
+    /* MENU CATEGORIES   */
+    /*-------------------*/
+    .befyne-menu-resp-header{
+        display: block;
+    }
+    .befyne-menu {
+        width: 100%;
+    }
+    .main-befyne-header .main-menu {
+        padding: 0;
+        display: none;
+    }
+    .befyne-menu li {
+        float: none;
+        margin: 0;
+        text-align: left;
+        border-bottom: 1px solid #6F6D6A;
+        padding: 1rem 0;
+    }
+    .befyne-menu li:last-child {
+        border-bottom: none;
+    }
+    /*-------------------*/
+    /* HOME PAGE LOGGUED */
+    /*-------------------*/
+    .welcome-area{
+        display: none;
+    }
+    .container.first{
+        display: none;
+    }
+    .first-responsive{
+        display: block;
+    }
+
+    .first-responsive .logo h1 {
+        background: url(../images/befyne.png) 50% no-repeat;
+    }
+
+    .middle-wrapper-bg {
+        padding-top: 2.4285rem;
+        padding-bottom: 12rem;
+    }
+
+    .go-discover{display: none;}
+    .discover-category {padding-top: 12%;}
+
+    .producteurs-listing--item {padding: 0;}
+    .producteurs-listing--item img {
+        width: auto;
+        min-width: 100%;
+    }
+    .producteurs-listing--item.half-bootstrap-pad-right .mask {width: 100%;}
+
+    .befyne-menu, .main-befyne-footer--item{ margin-bottom: 1rem;}
+    .befyne-menu, .main-befyne-footer--item:last-child{ margin-bottom: 0;}
+    .main-befyne-footer--item h4 {font-size: 1.1rem;}
+    .copyright p {text-align: center;font-size: .7rem;}
+    .copyright--logo p {
+        background: url(../images/befyne.png) 50% no-repeat;
+        background-size: contain;
+    }
+
+    /*-------------------*/
+    /* CATEGORY PAGE     */
+    /*-------------------*/
+    .middle-wrapper-bg.category {
+        padding-top: 2.4285rem;
+    }
+
+    .back-from-cat {
+        height: auto;
+        padding-top: 0;
+    }
+    .back-from-cat h4 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.1rem;
+        color: #fff;
+        padding: 1rem;
+    }
+    .back-from-cat p{display:none}
+    .back-from-cat .go-back {
+        background: url(../images/arrow-inverse-small.png) 50% no-repeat #fc8f02;
+    }
+    .back-from-cat .go-back:hover {
+        background: url(../images/arrow-inverse-small.png) 50% no-repeat #fc8f02;
+    }
+
+    /*-------------------*/
+    /* PRODUCTEUR PAGE   */
+    /*-------------------*/
+    .middle-wrapper-bg.producteur{
+        padding-bottom: 12rem;
+    }
+
+    .producteur-menu {
+        margin-bottom: 0.8571rem;
+    }
+    .producteur-intro{
+        margin-bottom: 2rem;
+    }
+    #modal-producteur-intro .modal-dialog {
+        width: auto;
+    }
+    #modal-producteur-intro .modal-dialog .pop-thumbs-listing {
+        margin-bottom: 2rem;
+    }
+    #modal-producteur-intro .modal-dialog .pop-close-btn{
+        z-index: 999;
+        left: 0;
+        top: .1rem;
+    }
+
+    .plp-item .actions a.know-more{
+        width: 78%;
+        display: inline-block;
+        height: 19px;
+        line-height: 15px;
+    }
+
+    /*-------------------*/
+    /* PRODUCT PAGE      */
+    /*-------------------*/
+    .grey-bg {margin-bottom: 2rem;}
+    .pdp-title h3{ margin-bottom: 1rem;}
+    .pdp-title .icon-share{text-align: left;}
+    .pdp-cart .stock-out {width: 35%;}
+    .info-first {min-height: 22.27rem;}
+
+    /*-------------------*/
+    /* CART PAGE         */
+    /*-------------------*/
+    .cart-steps {margin-bottom: 0.7857rem;}
+    .cart-steps .current-step li.steps-sep {width: 5rem;}
+    .cart-steps .current-step{margin-bottom: 1rem;}
+
+    /*-------------------*/
+    /* SHIPPING PAGE     */
+    /*-------------------*/
+    .shipping-table .shipping-header--title a {font-size: .7rem;}
+
+    /*-------------------*/
+    /* RECAP PAGE        */
+    /*-------------------*/
+    .cart-area.recap {min-height: 22.2857rem;}
+    .recap-area {
+        margin-left: 0;
+        width: 100%;
+    }
+    .passer-cmd {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .dataTables_paginate.paging_simple_numbers{
+        text-align: center;
+    }
+}
+
+
+/*-----------------------------------*/
+/*    MIN 481 &   MAX 767            */
+/*-----------------------------------*/
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .container.first{
+        display: none;
+    }
+    .first-responsive{
+        display: block;
+    }
+    .welcome-area{
+        display: none;
+    }
+
+    .panier-and-parrainage .panier a.btn{
+        font-size: .8rem;
+    }
+
+    .cart-steps .current-step li.steps-sep{
+        width: 9rem;
+    }
+    /*-------------------*/
+    /* MENU CATEGORIES   */
+    /*-------------------*/
+    .befyne-menu-resp-header{
+        display: block;
+    }
+    .befyne-menu {
+        width: 100%;
+    }
+    .main-befyne-header .main-menu {
+        padding: 0;
+        display: none;
+    }
+    .befyne-menu li {
+        float: none;
+        margin: 0;
+        text-align: left;
+        border-bottom: 1px solid #6F6D6A;
+        padding: 1rem 0;
+    }
+    .befyne-menu li:last-child {
+        border-bottom: none;
+    }
+
+    /* Fixes */
+    .middle-wrapper-bg {
+        padding-top: 2.4285rem;
+        padding-bottom: 12rem;
+    }
+    .copyright--text{
+        width: 80%;
+    }
+    .copyright--logo{
+        width: 20%;
+    }
+
+}
+/*-----------------------------------*/
+/*    MIN 768 &   MAX 991            */
+/*-----------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .welcome-area{
+        background: url(../images/welcome-sm.png) no-repeat;
+        background-size: cover;
+    }
+
+    /*-------------------*/
+    /* MENU CATEGORIES   */
+    /*-------------------*/
+    .befyne-menu-resp-header{
+        display: block;
+    }
+    .main-befyne-header .main-menu {
+        padding: 0;
+        display: none;
+    }
+    .befyne-menu{
+        width: 90%;
+    }
+    .befyne-menu li {
+        float: none;
+        margin: 0;
+        text-align: left;
+        border-bottom: 1px solid #6F6D6A;
+        padding: 1rem 0;
+    }
+    .befyne-menu li:last-child {
+        border-bottom: none;
+    }
+    /*-------------------*/
+    /* HOME PAGE LOGGUED */
+    /*-------------------*/
+    .middle-wrapper-bg {
+        padding-top: 2.4285rem;
+        padding-bottom: 12rem;
+    }
+    .producteurs-listing--item {padding: 0;}
+    .producteurs-listing--item img {
+        width: auto;
+        min-width: 100%;
+    }
+    .producteurs-listing--item.half-bootstrap-pad-right .mask {width: 100%;}
+
+    .befyne-menu, .main-befyne-footer--item{ margin-bottom: 1rem;}
+    .befyne-menu, .main-befyne-footer--item:last-child{ margin-bottom: 0;}
+    .main-befyne-footer--item h4 {font-size: 1.1rem;}
+
+    /*-------------------*/
+    /* CATEGORY PAGE     */
+    /*-------------------*/
+    .middle-wrapper-bg.category {
+        padding-top: 2.4285rem;
+    }
+
+    /*-------------------*/
+    /*     PDP PAGE      */
+    /*-------------------*/
+    .add-cart-related a.add-cart{
+        font-size: .5rem;
+    }
+    .grey-bg{
+        margin-bottom: 2rem;
+    }
+
+    /*-------------------*/
+    /*     CART PAGE     */
+    /*-------------------*/
+    .cart-steps .current-step li.steps-sep {
+        width: 9rem;
+    }
+
+    /*-------------------*/
+    /*   SEARCH PAGE     */
+    /*-------------------*/
+    .producteur-catalog.search .plp-item .price p{
+        font-size: 1rem;
+    }
+}
+
+/*-----------------------------------*/
+/*    MIN 992 &   MAX 1199           */
+/*-----------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .welcome-area{
+        background: url(../images/welcome-md.png) no-repeat;
+        background-size: cover;
+    }
+    .producteurs-listing--item.half-bootstrap-pad-right .mask {width: 98.5%;}
+    .producteur-catalog.search .plp-item .price p{
+        font-size: 1rem;
+    }
+}
+
+
+/*-----------------------------------*/
+/*        IPAD MEDIA QUERY           */
+/*-----------------------------------*/
+/* IPAD 3 */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .add-cart-related a.add-cart{
+        font-size: .4rem;
+        font-weight: bold;
+    }
+    #modal-producteur-intro .modal-dialog {
+        width: 735px;
+    }
+}
+/* IPHONE 5s */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .login .main-login--actions .login-btn{
+        width: 2.7rem;
+    }
+    .login-alert-container{
+        bottom: 7rem;
+        right: .5rem;
+        min-width: 22rem;
+        top: auto;
+    }
+    .cart-steps .current-step li.steps-sep {
+        width: 3rem;
+    }
+
+    .panier-and-parrainage .panier a.btn{
+        font-size: .8rem;
+    }
+
+    .go-shop{
+        margin-bottom: 2rem;
+    }
+
+    .cart-actions .go-checkout{
+        text-align: left;
+    }
+
+    .modal.fade .modal-dialog{
+        width: 300px;
+        max-width: 300px;
+    }
+
+    .lightbox-image-container img{
+        width: 100%;
+    }
+
+    .login-footer--copyright {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}

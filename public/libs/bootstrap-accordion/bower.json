@@ -1,0 +1,12 @@
+{
+  "name": "bower-bootstrap-accordion",
+  "license": "MIT",
+  "version": "0.11.0",
+  "author": {
+    "name": "https://github.com/angular-ui/bootstrap/graphs/contributors"
+  },
+  "dependencies": {
+    "bower-bootstrap-collapse": "0.11.0"
+  },
+  "main": "ui-accordion-tpls.js"
+}

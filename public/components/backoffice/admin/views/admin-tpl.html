@@ -1,0 +1,124 @@
+<div id="mail" class="wrapper">
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a ui-sref="admin" class="logo">
+            <span class="logo-mini"><b></b></span>
+            <span class="logo-lg"><b>Test</b>Admin</span>
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown messages-menu">
+                        <!-- Menu toggle button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-danger">{{messages.length}}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">{{"Vous avez"}} {{messages.length}} {{"nouveau messages"}}</li>
+                            <li>
+                                <!-- inner menu: contains the messages -->
+                                <ul class="menu">
+                                    <li ng-repeat="message in messages">
+                                        <!-- start message -->
+                                        <a href="#" ng-click="display(message)">
+                                            <div class="pull-left">
+                                                <!-- User Image -->
+                                                <img src="images/anonyme.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                {{message.writer.lastName}} {{message.writer.firstName}}
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>{{message.text | limitTo:15}}</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                </ul>
+                                <!-- /.menu -->
+                            </li>
+                            <li class="footer"><a ng-click="displayAll()" href="#">{{"Voir tous les messages"}}</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- The user image in the navbar-->
+                            <img src="images/anonyme.jpg" class="user-image" alt="User Image">
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">{{user.lastName|uppercase}} {{user.firstName|uppercase}}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- The user image in the menu -->
+                            <li class="user-header">
+                                <img src="images/anonyme.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    {{user.lastName|uppercase}} {{user.firstName|uppercase}} - <em>{{user.role}}</em>
+                                    <small>{{"Membre depuis"}} Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a ng-if="user.role != 'SUPER_ADMIN' " href ng-click="editUser(user._id)" class="btn btn-default btn-flat">{{'Profile'}}</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href ng-click="logout()" class="btn btn-default btn-flat">{{'Logout'}}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="images/anonyme.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>{{user.firstName|uppercase}} {{user.lastName|uppercase}}</p>
+                    <!-- Status -->
+                    <a href="javascript:void(0)"><i class="fa fa-calendar text-success"></i> {{"Membre depuis "}} Jan. 2016</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">{{'Menu Administration'}}</li>
+                <li ng-repeat="menu in menus" ui-sref-active="active">
+                    <a ui-sref="{{menu.state}}"><i class="{{menu.icon}}"></i> <span>{{menu.title}}</span></a>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" ui-view>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+
+</div>
+<!-- /.wrapper -->

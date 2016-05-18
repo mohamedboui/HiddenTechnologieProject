@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h3 class="modal-title"><i class="fa fa-trash fa-fw"></i> {{'Supprimer le compte'}} "{{::user.email}}"</h3>
+</div>
+<div class="modal-body">
+    {{"Est ce que vous êtes sûr de vouloir supprimer cet enregistrement ?"}}
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default pull-left" ng-click="cancel()"><i class="fa fa-undo"></i> {{'Annuler'}}</button>
+    <button type="button" class="btn btn-primary" ng-click="save()"><i class="fa fa-check"></i> {{'Confirmer'}}</button>
+</div>

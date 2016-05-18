@@ -1,0 +1,11 @@
+{
+  "framework": "jasmine",
+  "src_files": [
+    "bower_components/angular/angular.min.js",
+    "bower_components/angular-mocks/angular-mocks.js",
+    "src/alertService.js",
+    "src/alertCtrl.js",
+    "src/alerts-directive.js",
+    "spec/**/*.js"
+  ]
+}

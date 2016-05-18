@@ -1,0 +1,41 @@
+<div id="alerts-container" class="container-fluid no-pad befyne-login-page" ng-show="!user.isAuthenticated">
+
+    <div class="account">
+        <div class="container" id="login-block">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <div class="account-wall">
+                        <alert type="{{alert.type}}" close="closealert()" ng-if="show" dismiss-on-timeout="10">
+                            <span ng-bind-html="alert.msg"></span>
+                        </alert>
+                        <i class="user-img fa fa-user"></i>
+                        <form class="form-signin" ng-submit="login()" role="form">
+                            <div class="append-icon">
+                                <input type="text" data-ng-model="user.username" placeholder="{{'Email'}}" autocomplete="off" name="name" id="name" class="form-control form-white username" required>
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="append-icon m-b-20">
+                                <input type="password" data-ng-model="user.password" placeholder="{{'Mot de passe'}}" autocomplete="off" name="password" class="form-control form-white password" required>
+                                <i class="fa fa-lock"></i>
+                            </div>
+                            <button type="submit" id="submit-form" class="btn btn-lg btn-success btn-block ladda-button" data-style="expand-left">Sign In</button>
+                            <div class="social-btn">
+                                <div class="btn-group btn-block ">
+                                    <a class='btn btn-danger disabled'><i class="fa fa-google-plus" style="width:20px; height:17px"></i></a>
+                                    <a class='btn btn-danger ' href ng-click="authGoogle()" style="width:19.5em;"> Sign in with Google</a>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <p class="pull-left m-t-20"><a id="password" href ng-click="resetPassword()">Forgot password?</a></p>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

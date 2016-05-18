@@ -1,0 +1,161 @@
+  <section class="content">
+
+        <div class="row">
+    
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                            </div>
+                          <div class="col-sm-6" style="text-align: right;">
+                                <a class="btn btn-app" ng-click="addUser()">
+                                    <i class="fa fa-plus-circle"></i> {{'Ajouter'}}
+                                </a>
+                                <a class="btn btn-app" ng-click="import()">
+                                    <i class="fa fa-cloud-upload"></i> {{waitmsg}}
+                                </a>
+                                 <a class="btn btn-app" ng-click="contacter()">
+                                    <i class="fa fa-envelope-o"></i> {{'Envoyer un Msg'}}
+                                </a>
+                            </div>
+                        </div>
+                        <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info" style="margin-bottom: .5em;">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <a ng-click="search.sortBy='firstName'; search.orderAsc = !search.orderAsc">{{'Prénom'}}
+                                                <span ng-show="search.sortBy == 'firstName'">
+                                                    <span ng-show="search.orderAsc"><i class="fa fa-sort-alpha-asc"></i></span>
+                                                    <span ng-show="!search.orderAsc"><i class="fa fa-sort-alpha-desc"></i></span>
+                                                </span>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a ng-click="search.sortBy='lastName'; search.orderAsc = !search.orderAsc">{{'Nom'}}
+                                                <span ng-show="search.sortBy == 'lastName'">
+                                                    <span ng-show="search.orderAsc"><i class="fa fa-sort-alpha-asc"></i></span>
+                                                    <span ng-show="!search.orderAsc"><i class="fa fa-sort-alpha-desc"></i></span>
+                                                </span>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a ng-click="search.sortBy='email'; search.orderAsc = !search.orderAsc">{{'Email'}}
+                                                <span ng-show="search.sortBy == 'email'">
+                                                    <span ng-show="search.orderAsc"><i class="fa fa-sort-alpha-asc"></i></span>
+                                                    <span ng-show="!search.orderAsc"><i class="fa fa-sort-alpha-desc"></i></span>
+                                                </span>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a ng-click="search.sortBy='phone'; search.orderAsc = !search.orderAsc">{{'Téléphone'}}
+                                                <span ng-show="search.sortBy == 'phone'">
+                                                    <span ng-show="search.orderAsc"><i class="fa fa-sort-asc"></i></span>
+                                                    <span ng-show="!search.orderAsc"><i class="fa fa-sort-desc"></i></span>
+                                                </span>
+                                            </a>
+                                        </th>
+                                        <th>{{'Statut'}}</th>
+                                        <th class="text-center" ></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr-filters">
+                                            <td width="15%">
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control" ng-model="search.pattern.firstName" placeholder="{{'Prénom'}}"/>
+                                                </div>
+                                            </td>
+                                            <td width="15%">
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control" ng-model="search.pattern.lastName" placeholder="{{'Nom'}}"/>
+                                                </div>
+                                            </td>
+                                            <td width="15%">
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control" ng-model="search.pattern.email" placeholder="{{'Email'}}"/>
+                                                </div>
+                                            </td>
+                                            <td width="15%">
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control" ng-model="search.pattern.phone" placeholder="{{'Téléphone'}}"/>
+                                                </div>
+                                            </td>
+                                            <td  width="10%">
+                                                <div class="form-group input-group">
+                                                    <select class="form-control" ng-model="search.pattern.active">
+                                                        <option value="" selected="selected">{{'Tous'}}</option>
+                                                        <option value="true" selected="selected">{{'Actif'}}</option>
+                                                        <option value="false" selected="selected">{{'Inactif'}}</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td  width="10%">
+                                            </td>
+                                        </tr>
+                                        <tr ng-repeat="user in users track by user._id">
+                                            <td class="text-center" width="15%">{{user.firstName}}</td>
+                                            <td class="text-center" width="15%">{{user.lastName}}</td>
+                                            <td class="text-center" width="15%">{{user.email}}</td>
+                                            <td class="text-center" width="15%">{{user.phone}}</td>
+                                            <td class="text-center" width="10%">
+                                                <span class="label label-success" ng-if="user.active">{{'Actif'}}</span>
+                                                <span class="label label-default" ng-if="!user.active">{{'Inactif'}}</span>
+                                            </td>
+                                            <td class=" btn-group-xs text-center">
+                                                <a class="btn btn-primary" ng-click="showUser(user._id)"><i class="fa fa-eye"></i></a>
+                                                <a class="btn btn-warning" ng-click="editUser(user._id)"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a class="btn btn-danger" ng-click="deleteUser(user._id)"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-sm-5 col-lg-6 col-md-6">
+                                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+                                        <select ng-model="pagination.itemsPerPage"  class="form-control input-sm"
+                                                ng-options="value for value in paginationValues ">
+                                            <input type="hidden" name="size" value="{{::value}}"/>
+                                            {{::value }}
+                                        </select>
+                                        de <strong>{{::pagination.totalItems}}</strong> {{'enregistrement(s)'}}
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 col-lg-6 col-md-6">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate" style="text-align: right;">
+                                        <pagination total-items="pagination.totalItems"
+                                                    items-per-page="pagination.itemsPerPage"
+                                                    ng-model="pagination.currentPage"
+                                                    max-size="pagination.maxSize"
+                                                    boundary-links="true" class="pagination-sm" rotate="false"
+                                                    next-text="Suivant"
+                                                    last-text="Dernier"
+                                                    previous-text="Precedant"
+                                                    first-text="Premier">
+                                        </pagination>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section><!-- /.content -->

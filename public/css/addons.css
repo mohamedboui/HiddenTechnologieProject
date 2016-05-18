@@ -1,0 +1,116 @@
+.imgLogo{
+    border-radius: 8px;
+}
+.color-blue-dark {color:#314E67;}
+
+p.error{
+    color: red;
+    font-style: italic;
+    font-size: 13px;
+}
+
+p.error.no-marg{
+    margin: 0;
+}
+
+.login-alert-container{
+    position: absolute;
+    bottom: 6rem;
+    right: 5rem;
+    min-width: 18rem;
+}
+
+.login-alert-container .alert-error{
+    margin: 0;
+}
+
+.pagination-sm.pagination{
+    margin: 0;
+}
+
+
+.nav-tabs.user-space>li>a{
+    color: #108535;
+}
+
+.cart-table tbody>tr>td {
+    padding-top: 1.5rem;
+}
+
+.add-cart-related a.add-cart{
+    border: none;
+    color: #fff;
+    font-size: .6428rem;
+    font-weight: 500;
+    width: 2.1428rem;
+    height: 2.1428rem;
+    text-transform: uppercase;
+    padding: .3rem .5rem;
+    border-radius: 2.5rem;
+    background: #3fa441;
+    background-image: -webkit-linear-gradient(top,#6dba6e,#3fa441);
+    background-image: -moz-linear-gradient(top,#6dba6e,#3fa441);
+    background-image: -ms-linear-gradient(top,#6dba6e,#3fa441);
+    background-image: -o-linear-gradient(top,#6dba6e,#3fa441);
+    background-image: linear-gradient(to bottom,#6dba6e,#3fa441);
+}
+
+.add-cart-related a.add-cart:hover{
+    background: #329334;
+    background-image: -webkit-linear-gradient(top,#3fa441,#329334);
+    background-image: -moz-linear-gradient(top,#3fa441,#329334);
+    background-image: -ms-linear-gradient(top,#3fa441,#329334);
+    background-image: -o-linear-gradient(top,#3fa441,#329334);
+    background-image: linear-gradient(to bottom,#3fa441,#329334);
+}
+
+.plp-item .actions a.add-cart.to-remove, .pdp-cart .add-cart.to-remove, .add-cart-related a.add-cart.to-remove{
+    background: #e67e22;
+    background-image: linear-gradient(to bottom, #e67e22, #A76D3A);
+
+    background-image: -webkit-linear-gradient(top,#e67e22, #A76D3A);
+    background-image: -moz-linear-gradient(top,#e67e22, #A76D3A);
+    background-image: -ms-linear-gradient(top,#e67e22, #A76D3A);
+    background-image: -o-linear-gradient(top,#e67e22, #A76D3A);
+}
+
+.plp-item .actions a.add-cart.to-remove:hover, .pdp-cart .add-cart.to-remove:hover, .add-cart-related a.add-cart.to-remove:hover{
+    background: #e67e22;
+    background-image: linear-gradient(to bottom, #f39c12, #A76D3A);
+    background-image: -webkit-linear-gradient(top,#f39c12, #A76D3A);
+    background-image: -moz-linear-gradient(top,#f39c12, #A76D3A);
+    background-image: -ms-linear-gradient(top,#f39c12, #A76D3A);
+    background-image: -o-linear-gradient(top,#f39c12, #A76D3A);
+}
+
+.producteur-menu--side-menu a.title {
+    color: #716c6a;
+    display: inline-block;
+    padding: .3rem .9rem;
+}
+.producteur-menu--side-menu a.title:hover {
+    color: #3fa441;
+    display: inline-block;
+    padding: .3rem .9rem;
+}
+.producteur-menu--side-menu p.icon{
+    padding-top: 0.4rem;
+}
+
+.tab-content.user-space .tab-pane .box-body{
+    min-height: 300px;
+}
+
+h2.user-space-title{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    background: #3fa441;
+    padding: .5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.extra-height{
+    min-height: 33.5rem;
+}

@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <div class="row vertical-align">
+        <div class="col-lg-10 col-md-6 col-xs-10">
+            <h3 class="modal-title"><i class="fa fa-info-circle fa-fw"></i> {{"Informations"}} : {{::user.firstName}} {{::user.lastName}}</h3>
+        </div>
+        <div class="col-lg-2 col-md-6 col-xs-2">
+            <div class="input-group pull-right">
+                <span ng-if="user.active" class="label label-success">{{'Actif'}}</span>
+                <span ng-if="!user.active" class="label label-danger">{{'Inactif'}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-body">
+	<fieldset>
+		<div class="panel panel-default">
+			<div class="panel-heading">{{'Informations générales'}}</div>
+			<div class="panel-body normal">
+                <p>
+                    <i class="fa fa-user"></i> {{::user.firstName}} {{::user.lastName}}<br>
+                    <i class="fa fa-at"></i> {{::user.email}}<br>
+                    <i class="fa fa-phone"></i> {{::user.phone}}<br>
+                </p>
+			</div>
+		</div>
+	</fieldset>
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default pull-left" ng-click="cancel()"><i class="fa fa-undo"></i> {{'Fermer'}}</button>
+</div>

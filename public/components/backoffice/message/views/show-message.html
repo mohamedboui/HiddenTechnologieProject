@@ -1,0 +1,55 @@
+<br/> <br/><br/> <br/>
+                           
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="dataTables_wrapper form-inline dt-bootstrap">
+                            
+                            <table id="mailbox_table" class="table table-yuk2 bg-fill toggle-arrow-tiny" data-page-size="20" data-filter="#message_filter">
+                                <thead>
+                                    <tr>
+                                        <th class="cw footable_toggler"></th>
+                                        <th class="cw"></th>
+                                        <th data-hide="phone,tablet">From</th>
+                                        <th>Subject</th>
+                                        <th data-hide="phone">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="message in allMessages" ng-class="{'readed':message.isReaded == true}" >
+                                        <td>
+                                            <div><a href ng-click="delete(message._id)"><i class="fa fa-trash corbeille "></a></i>
+                                            </div>
+                                        </td>
+                                        <td ng-click="display(message)" class="mbox_star"><span class="icon_star_alt"></span></td>
+                                        <td ng-click="display(message)" >{{message.writer.firstName}} {{message.writer.lastName}}</td>
+                                        <td ng-click="display(message)"><a href="pages-mailbox_message.html">{{message.subject}}.</a></td>
+                                        <td ng-click="display(message)"> {{message.createdAt | enddate: message.createdAt}}</td>
+                                    </tr>
+
+
+                                </tbody>
+                                <tfoot class="hide-if-no-paging">
+                                    <tr>
+                                        <td colspan="6">
+                                            <ul class="pagination pagination-sm"></ul>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                            <div style="text-align: right;">
+                                <pagination total-items="pagination.totalItems" items-per-page="pagination.itemsPerPage" ng-model="pagination.currentPage" max-size="pagination.maxSize" boundary-links="true" class="pagination-sm" rotate="false" next-text="Suivant" last-text="Dernier" previous-text="Précédent" first-text="Premier">
+                                </pagination>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

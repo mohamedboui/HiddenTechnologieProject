@@ -1,0 +1,118 @@
+<div class="modal-header">
+    <div class="row vertical-align">
+        <div class="col-lg-9 col-md-9 col-xs-9">
+            <h3 class="modal-title"><i class="fa fa-pencil-square-o"></i> {{'Editer l \'utilisateur'}} : {{::user.email}}</h3>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-3">
+            <div class="input-group pull-right">
+                <div toggle-switch html="true" class="isSwitch switch-primary"
+                     knob-label="{{'Actif'}" on-label="{{'Oui'}}" off-label="{{'Non'}}"
+                     model = "user.active">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-body">
+    <fieldset>
+        <div class="panel panel-default">
+            <div class="panel-heading">{{'Utilisateur'}}</div>
+            <div class="panel-body normal">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Prénom'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-adn"></i></span>
+                                        <input type="text" class="form-control" ng-model="user.firstName" placeholder="{{'Prénom'}}"/>
+                                    </div>
+                                    <p class="error" ng-if="required.firstName">{{'Ce champ est obligatoire.'}}</p>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Nom'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-adn"></i></span>
+                                        <input type="text" class="form-control" ng-model="user.lastName" placeholder="{{'Nom'}}"/>
+                                    </div>
+                                    <p class="error" ng-if="required.lastName">{{'Ce champ est obligatoire.'}}</p>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Email'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-at"></i></span>
+                                        <input type="text" class="form-control" ng-model="user.email" placeholder="{{'Email'}}"/>
+                                    </div>
+                                    <p class="error" ng-if="required.email">{{'Email invalide.'}}</p>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Mot de passe'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                        <input type="password" class="form-control" ng-model="user.password" placeholder="{{'Mot de passe'}}"/>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Téléphone'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                        <input type="text" class="form-control" ng-model="user.phone" placeholder="{{'Téléphone'}}"/>
+                                    </div>
+                                    <p class="error" ng-if="required.phone">{{'Ce champ est obligatoire.'}}</p>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{{'Role'}}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <ui-select ng-model="user.role" theme="bootstrap">
+                                            <ui-select-match placeholder="Choisissez un role">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="role in roles">
+                                                <div ng-bind-html="role.name | highlight: $select.search"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <p class="error" ng-if="required.role">{{'Ce champ est obligatoire.'}}</p>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default pull-left" ng-click="cancel()"><i class="fa fa-undo"></i> {{'Annuler'}}</button>
+    <button type="button" class="btn btn-primary" ng-click="save()"><i class="fa fa-floppy-o"></i> {{'Enregistrer'}}</button>
+</div>
